@@ -4,9 +4,64 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HDFocus LCD Digital Signage | Professional B2B Display Solutions</title>
-  <meta name="description" content="HDFocus specializes in professional LCD digital signage solutions — indoor & outdoor displays, menu boards, transparent screens, touch kiosks and more. Custom OEM/ODM for global B2B clients." />
+  <meta name="description" content="HDFocus — 10+ years manufacturing premium LCD digital signage. Grade-A 4K panels, up to 5000-nit brightness, free CMS software. OEM/ODM for global B2B partners." />
   <meta name="keywords" content="LCD digital signage, digital display, menu board, transparent screen, outdoor signage, B2B display manufacturer, HDFocus" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* HERO SLIDER */
+    .hero-slider { position:relative; height:100vh; min-height:600px; overflow:hidden; }
+    .slide { position:absolute; inset:0; opacity:0; transition:opacity 1s ease; }
+    .slide.active { opacity:1; }
+    .slide-bg { position:absolute; inset:0; background-size:cover; background-position:center; }
+    .slide-overlay { position:absolute; inset:0; background:linear-gradient(135deg,rgba(0,20,60,0.88) 0%,rgba(0,50,120,0.65) 100%); }
+    .slide-content { position:absolute; inset:0; display:flex; align-items:center; padding:0 8%; padding-top:68px; }
+    .slide-text { max-width:680px; color:#fff; }
+    .slide-tag { display:inline-block; background:rgba(0,180,216,0.25); color:#00d4ff; border:1px solid rgba(0,180,216,0.4); font-size:0.78rem; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; padding:0.35rem 1rem; border-radius:20px; margin-bottom:1.25rem; }
+    .slide-text h1 { font-size:clamp(2rem,4.5vw,3.2rem); font-weight:800; color:#fff; line-height:1.15; margin-bottom:1rem; }
+    .slide-text h1 span { color:#00d4ff; }
+    .slide-text p { color:rgba(255,255,255,0.85); font-size:1.05rem; margin-bottom:2rem; max-width:520px; }
+    .slide-buttons { display:flex; gap:1rem; flex-wrap:wrap; }
+    .slider-dots { position:absolute; bottom:2rem; left:50%; transform:translateX(-50%); display:flex; gap:0.6rem; z-index:10; }
+    .dot { width:10px; height:10px; border-radius:50%; background:rgba(255,255,255,0.4); cursor:pointer; transition:all 0.3s; }
+    .dot.active { background:#00d4ff; transform:scale(1.3); }
+    .slider-arrow { position:absolute; top:50%; transform:translateY(-50%); z-index:10; background:rgba(255,255,255,0.15); border:none; color:#fff; width:46px; height:46px; border-radius:50%; font-size:1.2rem; cursor:pointer; transition:background 0.2s; display:flex; align-items:center; justify-content:center; backdrop-filter:blur(4px); }
+    .slider-arrow:hover { background:rgba(255,255,255,0.3); }
+    .slider-arrow.prev { left:2rem; }
+    .slider-arrow.next { right:2rem; }
+
+    /* STATS BAR */
+    .stats-bar { background:var(--primary); padding:1.5rem 5%; }
+    .stats-bar-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; text-align:center; }
+    .stat-item strong { display:block; font-size:1.8rem; font-weight:800; color:#fff; }
+    .stat-item span { font-size:0.82rem; color:rgba(255,255,255,0.75); }
+    @media(max-width:600px){ .stats-bar-grid { grid-template-columns:repeat(2,1fr); } }
+
+    /* PRODUCT CARDS WITH IMAGE */
+    .product-card .product-img img { width:100%; height:100%; object-fit:cover; transition:transform 0.4s; }
+    .product-card:hover .product-img img { transform:scale(1.05); }
+
+    /* SOLUTION CARDS WITH PHOTO BG */
+    .sol-photo { background-size:cover; background-position:center; }
+    .sol-photo .sol-overlay { background:linear-gradient(to top, rgba(0,0,0,0.75) 40%, rgba(0,0,0,0.2) 100%); position:absolute; inset:0; border-radius:var(--radius); }
+    .solution-card { overflow:hidden; }
+
+    /* CERTIFICATIONS */
+    .cert-bar { display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center; justify-content:center; padding:2rem 5%; background:var(--gray); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+    .cert-bar img { height:40px; width:auto; opacity:0.75; filter:grayscale(30%); transition:opacity 0.2s; }
+    .cert-bar img:hover { opacity:1; }
+
+    /* CASE PHOTOS */
+    .case-photo { height:200px; overflow:hidden; }
+    .case-photo img { width:100%; height:100%; object-fit:cover; transition:transform 0.4s; }
+    .case-card:hover .case-photo img { transform:scale(1.05); }
+
+    /* FACTORY GRID */
+    .factory-grid { display:grid; grid-template-columns:1fr 1fr; grid-template-rows:auto auto; gap:1rem; border-radius:var(--radius); overflow:hidden; }
+    .factory-grid img { width:100%; object-fit:cover; display:block; }
+    .factory-grid img:first-child { grid-row:1/3; height:100%; }
+    .factory-grid img:not(:first-child) { height:200px; }
+    @media(max-width:600px){ .factory-grid { grid-template-columns:1fr; } .factory-grid img:first-child { grid-row:auto; height:220px; } }
+  </style>
 </head>
 <body>
 
@@ -24,36 +79,85 @@
   <div class="hamburger"><span></span><span></span><span></span></div>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-content">
-    <div class="hero-tag">Professional LCD Digital Signage Manufacturer</div>
-    <h1>Elevate Your Brand with <span>Smart Display</span> Solutions</h1>
-    <p>HDFocus delivers premium LCD digital signage for retail, hospitality, corporate, and outdoor environments. 4K clarity, up to 5000-nit brightness, fully customizable — built for global B2B partners.</p>
-    <div class="hero-buttons">
-      <a href="products.html" class="btn btn-white">Explore Products</a>
-      <a href="contact.html" class="btn btn-accent">Get a Free Quote</a>
-    </div>
-    <div class="hero-stats">
-      <div class="stat">
-        <strong>10+</strong>
-        <span>Product Lines</span>
-      </div>
-      <div class="stat">
-        <strong>50+</strong>
-        <span>Countries Served</span>
-      </div>
-      <div class="stat">
-        <strong>5000</strong>
-        <span>Nits Max Brightness</span>
-      </div>
-      <div class="stat">
-        <strong>OEM/ODM</strong>
-        <span>Custom Ready</span>
+<!-- HERO SLIDER -->
+<div class="hero-slider">
+
+  <div class="slide active">
+    <div class="slide-bg" style="background-image:url('https://www.hdfocuspro.com/uploads/42215/banner/20240520050919c6746.jpg?size=1920x0');"></div>
+    <div class="slide-overlay"></div>
+    <div class="slide-content">
+      <div class="slide-text">
+        <div class="slide-tag">Professional LCD Digital Signage Manufacturer</div>
+        <h1>Elevate Your Brand with <span>Smart Display</span> Solutions</h1>
+        <p>Grade-A 4K panels, up to 5000-nit brightness, free CMS software — built for global B2B distributors and integrators.</p>
+        <div class="slide-buttons">
+          <a href="products.html" class="btn btn-white">Explore Products</a>
+          <a href="contact.html" class="btn btn-accent">Get a Free Quote</a>
+        </div>
       </div>
     </div>
   </div>
-</section>
+
+  <div class="slide">
+    <div class="slide-bg" style="background-image:url('https://www.hdfocuspro.com/uploads/42215/banner/2025040301594510658.jpg?size=1920x0');"></div>
+    <div class="slide-overlay"></div>
+    <div class="slide-content">
+      <div class="slide-text">
+        <div class="slide-tag">Indoor & Outdoor Solutions</div>
+        <h1>From Retail Floors to <span>Outdoor Plazas</span></h1>
+        <p>12 product lines covering every commercial display scenario — with full OEM/ODM customization for your brand.</p>
+        <div class="slide-buttons">
+          <a href="solutions.html" class="btn btn-white">View Solutions</a>
+          <a href="contact.html" class="btn btn-accent">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide">
+    <div class="slide-bg" style="background-image:url('https://www.hdfocuspro.com/uploads/42215/banner/2025040302554501a47.jpg?size=1920x0');"></div>
+    <div class="slide-overlay"></div>
+    <div class="slide-content">
+      <div class="slide-text">
+        <div class="slide-tag">Free CMS Software Included</div>
+        <h1>Remote Control <span>All Your Screens</span> in One Click</h1>
+        <p>Our cloud-based CMS lets you manage unlimited screens globally — schedule, publish, monitor, and update in real time.</p>
+        <div class="slide-buttons">
+          <a href="products.html" class="btn btn-white">See Products</a>
+          <a href="contact.html" class="btn btn-accent">Get a Demo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="slider-arrow prev" onclick="changeSlide(-1)">&#8249;</button>
+  <button class="slider-arrow next" onclick="changeSlide(1)">&#8250;</button>
+  <div class="slider-dots">
+    <div class="dot active" onclick="goSlide(0)"></div>
+    <div class="dot" onclick="goSlide(1)"></div>
+    <div class="dot" onclick="goSlide(2)"></div>
+  </div>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stats-bar-grid">
+    <div class="stat-item"><strong>200+</strong><span>Employees</span></div>
+    <div class="stat-item"><strong>3,000+</strong><span>Global Clients</span></div>
+    <div class="stat-item"><strong>50+</strong><span>Countries Served</span></div>
+    <div class="stat-item"><strong>10+</strong><span>Years Experience</span></div>
+  </div>
+</div>
+
+<!-- CERTIFICATIONS -->
+<div class="cert-bar">
+  <img src="https://www.hdfocuspro.com/js/42215/CE.svg" alt="CE" title="CE Certified">
+  <img src="https://www.hdfocuspro.com/js/42215/FC.svg" alt="FCC" title="FCC Certified">
+  <img src="https://www.hdfocuspro.com/js/42215/RoHs.svg" alt="RoHS" title="RoHS Compliant">
+  <img src="https://www.hdfocuspro.com/js/42215/ISO_9001.svg" alt="ISO 9001" title="ISO 9001">
+  <img src="https://www.hdfocuspro.com/js/42215/ISO_14001.svg" alt="ISO 14001" title="ISO 14001">
+  <img src="https://www.hdfocuspro.com/js/42215/Energy_Star.svg" alt="Energy Star" title="Energy Star">
+</div>
 
 <!-- KEY FEATURES -->
 <section class="section">
@@ -66,32 +170,32 @@
     <div class="feature-card">
       <div class="feature-icon">🖥️</div>
       <h3>Grade-A 4K Panels</h3>
-      <p>Original Grade-A LCD panels delivering stunning 4K Ultra HD clarity with true-to-life color reproduction.</p>
+      <p>Original Grade-A LCD panels with stunning 4K UHD clarity, true-to-life color, zero dead pixels guaranteed.</p>
     </div>
     <div class="feature-card">
       <div class="feature-icon">☀️</div>
       <h3>Up to 5000-Nit Brightness</h3>
-      <p>Custom brightness options from standard to ultra-high 5000 nits, readable in direct sunlight or any environment.</p>
+      <p>Custom brightness from 400 to 5000 nits — readable in direct sunlight or any high-ambient-light environment.</p>
     </div>
     <div class="feature-card">
       <div class="feature-icon">📡</div>
-      <h3>Free CMS Software Included</h3>
-      <p>Every display ships with our professional content management system — remote control, scheduling, and one-click publishing.</p>
+      <h3>Free CMS Software</h3>
+      <p>Cloud-based CMS included with every purchase — remote control, scheduling, one-click publishing, no monthly fees.</p>
     </div>
     <div class="feature-card">
-      <div class="feature-icon">🎛️</div>
-      <h3>Built-in Templates</h3>
-      <p>Hundreds of ready-to-use design templates for menus, promotions, announcements, and more. No design skills needed.</p>
+      <div class="feature-icon">🎨</div>
+      <h3>100+ Built-in Templates</h3>
+      <p>Ready-to-use professional templates for menus, promotions, events, and corporate announcements.</p>
     </div>
     <div class="feature-card">
       <div class="feature-icon">🔧</div>
-      <h3>Fully Customizable</h3>
-      <p>Custom size, bezel, OS, interface (HDMI, USB-C, RS232), and mounting options. OEM/ODM accepted for all products.</p>
+      <h3>Full OEM/ODM Service</h3>
+      <p>Custom size, bezel, OS, interfaces, and branding. 12% of revenue invested in R&D for continuous innovation.</p>
     </div>
     <div class="feature-card">
       <div class="feature-icon">🌐</div>
-      <h3>Remote Management</h3>
-      <p>Control unlimited screens from anywhere in the world via our cloud platform — update content, monitor status, reboot remotely.</p>
+      <h3>Global Remote Management</h3>
+      <p>Manage unlimited screens worldwide from one dashboard — update content, monitor status, reboot remotely.</p>
     </div>
   </div>
 </section>
@@ -101,116 +205,122 @@
   <div class="section-header">
     <div class="tag">Products</div>
     <h2>Our Digital Signage Lineup</h2>
-    <p>From slim indoor displays to robust outdoor panels, we have the right solution for every scenario.</p>
+    <p>12 product lines covering every indoor and outdoor commercial display scenario.</p>
   </div>
   <div class="products-grid">
     <div class="product-card">
-      <div class="product-img">🖥️<div class="product-badge">Indoor</div></div>
+      <div class="product-img" style="background:none;height:220px;overflow:hidden;position:relative;">
+        <img src="https://www.hdfocuspro.com/uploads/42215/products/p202501160916598be5d.png?size=297x0" alt="Freestanding Display">
+        <div class="product-badge">Indoor</div>
+      </div>
       <div class="product-info">
         <h3>Freestanding Floor Display</h3>
-        <p>Elegant portrait/landscape kiosks for retail, lobbies, and exhibitions. Slim profile with optional touch.</p>
-        <div class="product-specs">
-          <span class="spec-tag">4K</span><span class="spec-tag">Android/Windows</span><span class="spec-tag">32"–98"</span>
-        </div>
+        <p>Slim elegant kiosks for retail, lobbies, and exhibitions. Portrait/landscape with optional touch.</p>
+        <div class="product-specs"><span class="spec-tag">4K</span><span class="spec-tag">Android/Windows</span><span class="spec-tag">32"–98"</span></div>
       </div>
     </div>
     <div class="product-card">
-      <div class="product-img">📺<div class="product-badge">Indoor</div></div>
+      <div class="product-img" style="background:none;height:220px;overflow:hidden;position:relative;">
+        <img src="https://www.hdfocuspro.com/uploads/42215/list/p20260318164052a1caa.jpg?size=600x0" alt="Wall Display">
+        <div class="product-badge">Indoor</div>
+      </div>
       <div class="product-info">
         <h3>Wall-Mounted Display</h3>
-        <p>Ultra-thin wall-mount panels for corridors, meeting rooms, and retail walls. Easy installation.</p>
-        <div class="product-specs">
-          <span class="spec-tag">4K</span><span class="spec-tag">Slim Bezel</span><span class="spec-tag">32"–86"</span>
-        </div>
+        <p>Ultra-slim wall panels for corridors, meeting rooms, and retail walls. VESA mount compatible.</p>
+        <div class="product-specs"><span class="spec-tag">4K</span><span class="spec-tag">Slim Bezel</span><span class="spec-tag">32"–86"</span></div>
       </div>
     </div>
     <div class="product-card">
-      <div class="product-img">🍽️<div class="product-badge">Indoor</div></div>
+      <div class="product-img" style="background:none;height:220px;overflow:hidden;position:relative;">
+        <img src="https://www.hdfocuspro.com/uploads/42215/products/p2024052311184853bbe.jpg?size=785x0" alt="Menu Board">
+        <div class="product-badge">Indoor</div>
+      </div>
       <div class="product-info">
         <h3>Digital Menu Board</h3>
-        <p>Vibrant menu displays for restaurants, cafes, and QSR chains. Multi-zone layout with auto scheduling.</p>
-        <div class="product-specs">
-          <span class="spec-tag">4K</span><span class="spec-tag">Multi-Zone</span><span class="spec-tag">Scheduling</span>
-        </div>
+        <p>Dynamic menu displays for restaurants and QSR. Multi-zone layout with day-part scheduling.</p>
+        <div class="product-specs"><span class="spec-tag">4K</span><span class="spec-tag">Multi-Zone</span><span class="spec-tag">Scheduling</span></div>
       </div>
     </div>
     <div class="product-card">
-      <div class="product-img">🔲<div class="product-badge">Indoor</div></div>
+      <div class="product-img" style="background:none;height:220px;overflow:hidden;position:relative;">
+        <img src="https://www.hdfocuspro.com/uploads/42215/list/p202603181640592472d.jpg?size=600x0" alt="Touch Kiosk">
+        <div class="product-badge">Interactive</div>
+      </div>
+      <div class="product-info">
+        <h3>Self-Order Kiosk</h3>
+        <p>Self-service ordering terminals for QSR and retail. POS integration, payment-ready.</p>
+        <div class="product-specs"><span class="spec-tag">10-Point Touch</span><span class="spec-tag">POS Ready</span><span class="spec-tag">4K</span></div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-img" style="background:none;height:220px;overflow:hidden;position:relative;">
+        <img src="https://www.hdfocuspro.com/uploads/42215/list/p20260318164107cbc0a.jpg?size=600x0" alt="Transparent Screen">
+        <div class="product-badge">Unique</div>
+      </div>
       <div class="product-info">
         <h3>Transparent Dual Screen</h3>
-        <p>Unique see-through display with dual-screen capability — perfect for product showcasing and retail windows.</p>
-        <div class="product-specs">
-          <span class="spec-tag">Transparent</span><span class="spec-tag">Dual Screen</span><span class="spec-tag">4K</span>
-        </div>
+        <p>See-through dual display — showcase products inside while showing digital content on screen.</p>
+        <div class="product-specs"><span class="spec-tag">Transparent</span><span class="spec-tag">Dual Screen</span><span class="spec-tag">4K</span></div>
       </div>
     </div>
     <div class="product-card">
-      <div class="product-img">👆<div class="product-badge">Indoor</div></div>
-      <div class="product-info">
-        <h3>Touch Table / Interactive Kiosk</h3>
-        <p>Multi-touch interactive tables and self-service kiosks for hospitality, retail, and corporate spaces.</p>
-        <div class="product-specs">
-          <span class="spec-tag">10-Point Touch</span><span class="spec-tag">4K</span><span class="spec-tag">Custom OS</span>
-        </div>
+      <div class="product-img" style="background:none;height:220px;overflow:hidden;position:relative;">
+        <img src="https://www.hdfocuspro.com/uploads/42215/page/p20240722171020b8a02.jpg?size=600x0" alt="Outdoor Signage">
+        <div class="product-badge">Outdoor</div>
       </div>
-    </div>
-    <div class="product-card">
-      <div class="product-img">🌤️<div class="product-badge">Outdoor</div></div>
       <div class="product-info">
         <h3>Outdoor Digital Signage</h3>
-        <p>Weatherproof IP65-rated outdoor displays. High brightness up to 5000 nits for direct sunlight readability.</p>
-        <div class="product-specs">
-          <span class="spec-tag">IP65</span><span class="spec-tag">5000 nits</span><span class="spec-tag">4K</span>
-        </div>
+        <p>IP65-rated weatherproof displays. Up to 5000-nit brightness for direct sunlight readability.</p>
+        <div class="product-specs"><span class="spec-tag">IP65</span><span class="spec-tag">5000 nits</span><span class="spec-tag">4K</span></div>
       </div>
     </div>
   </div>
   <div style="text-align:center;margin-top:2.5rem;">
-    <a href="products.html" class="btn btn-primary">View All Products</a>
+    <a href="products.html" class="btn btn-primary">View All 12 Products</a>
   </div>
 </section>
 
-<!-- SOLUTIONS TEASER -->
+<!-- SOLUTIONS -->
 <section class="section">
   <div class="section-header">
     <div class="tag">Solutions</div>
     <h2>Tailored for Every Industry</h2>
-    <p>Whether you serve restaurants, retailers, hotels, or corporations — our displays fit right in.</p>
+    <p>Deployed across 50+ countries in retail, hospitality, food service, corporate, and public environments.</p>
   </div>
   <div class="solutions-grid">
-    <div class="solution-card" style="background:linear-gradient(135deg,#1a3a5c,#0057b8);">
+    <div class="solution-card" style="background:linear-gradient(135deg,#0d2137,#0057b8);">
       <div class="solution-icon">🛍️</div>
       <h3>Retail & Shopping</h3>
-      <p>Drive engagement with dynamic promotional displays, wayfinding, and digital shelf labels.</p>
+      <p>Dynamic promotions, wayfinding, and high-brightness window displays to drive foot traffic.</p>
     </div>
-    <div class="solution-card" style="background:linear-gradient(135deg,#1a2e1a,#1a7a1a);">
+    <div class="solution-card" style="background:linear-gradient(135deg,#0d2e0d,#1a6e1a);">
       <div class="solution-icon">🍔</div>
       <h3>Food & Beverage</h3>
-      <p>Digital menu boards and ordering kiosks that update instantly and increase average order value.</p>
+      <p>Digital menu boards and self-order kiosks proven to increase average order value by 20%+.</p>
     </div>
-    <div class="solution-card" style="background:linear-gradient(135deg,#3a1a2e,#8b1a5c);">
+    <div class="solution-card" style="background:linear-gradient(135deg,#2a0d2e,#7a1a6e);">
       <div class="solution-icon">🏨</div>
       <h3>Hospitality & Hotels</h3>
-      <p>Lobby signage, wayfinding, event boards, and in-room displays for premium guest experiences.</p>
+      <p>Lobby screens, event boards, restaurant menus, and outdoor entrance signage.</p>
     </div>
-    <div class="solution-card" style="background:linear-gradient(135deg,#1a2a3a,#1a4a6a);">
+    <div class="solution-card" style="background:linear-gradient(135deg,#0d1f2e,#1a4a6e);">
       <div class="solution-icon">🏢</div>
       <h3>Corporate & Office</h3>
-      <p>Meeting room displays, internal communications, and employee dashboards to boost productivity.</p>
+      <p>KPI dashboards, meeting room displays, and internal communications for modern workplaces.</p>
     </div>
-    <div class="solution-card" style="background:linear-gradient(135deg,#2a1a1a,#6a2a1a);">
+    <div class="solution-card" style="background:linear-gradient(135deg,#2e1a0d,#6e3a1a);">
       <div class="solution-icon">🚉</div>
       <h3>Transportation & Public</h3>
-      <p>Passenger information displays, outdoor wayfinding, and high-traffic public space signage.</p>
+      <p>Outdoor wayfinding kiosks, passenger info boards, and 24/7 advertising displays.</p>
     </div>
-    <div class="solution-card" style="background:linear-gradient(135deg,#1a1a3a,#2a2a6a);">
+    <div class="solution-card" style="background:linear-gradient(135deg,#0d1f2e,#1a3a6e);">
       <div class="solution-icon">🏥</div>
       <h3>Healthcare & Education</h3>
-      <p>Queue management displays, campus wayfinding, and patient information systems.</p>
+      <p>Queue management, campus wayfinding, and self-check-in kiosks for institutional environments.</p>
     </div>
   </div>
   <div style="text-align:center;margin-top:2.5rem;">
-    <a href="solutions.html" class="btn btn-outline">View All Solutions</a>
+    <a href="solutions.html" class="btn btn-outline">Explore All Solutions</a>
   </div>
 </section>
 
@@ -219,36 +329,80 @@
   <div class="section-header">
     <div class="tag">Our Advantages</div>
     <h2>The HDFocus Difference</h2>
-    <p>We are more than a manufacturer — we are your long-term display partner.</p>
   </div>
   <div class="why-grid">
     <div class="why-card">
       <div class="why-number">4K</div>
-      <h3>Grade-A Screens</h3>
-      <p>Only original Grade-A panels — no compromises on display quality.</p>
+      <h3>Grade-A Screens Only</h3>
+      <p>Zero dead pixels, certified original panels — no refurbished or second-grade components.</p>
     </div>
     <div class="why-card">
-      <div class="why-number">OEM</div>
-      <h3>Custom & ODM Ready</h3>
-      <p>Your logo, your specs, your packaging — minimum order flexible.</p>
+      <div class="why-number">12%</div>
+      <h3>R&D Investment</h3>
+      <p>12% of annual revenue reinvested into research and development for continuous innovation.</p>
     </div>
     <div class="why-card">
       <div class="why-number">FREE</div>
       <h3>CMS Software</h3>
-      <p>Professional CMS included with every purchase — no hidden fees.</p>
+      <p>Professional cloud CMS included with every unit — no subscription, no hidden fees, forever.</p>
     </div>
     <div class="why-card">
-      <div class="why-number">24H</div>
-      <h3>Fast Response</h3>
-      <p>Dedicated B2B support team responds within 24 hours globally.</p>
+      <div class="why-number">ISO</div>
+      <h3>Certified Quality</h3>
+      <p>ISO 9001 & ISO 14001 certified. 100% pre-shipment QC testing on every unit.</p>
     </div>
+  </div>
+</section>
+
+<!-- FACTORY SECTION -->
+<section class="section">
+  <div class="section-header">
+    <div class="tag">Our Factory</div>
+    <h2>Shenzhen Manufacturing Excellence</h2>
+    <p>200+ employees, ISO-certified production lines, and strict quality control — every unit tested before shipment.</p>
+  </div>
+  <div class="factory-grid">
+    <img src="https://www.hdfocuspro.com/uploads/42215/page/p20240723085947566e2.jpg?size=800x0" alt="HDFocus Factory" style="border-radius:var(--radius) 0 0 var(--radius);">
+    <img src="https://www.hdfocuspro.com/uploads/42215/page/p20240724112029bde34.jpg?size=800x0" alt="HDFocus Office" style="border-radius:0 var(--radius) 0 0;">
+    <img src="https://www.hdfocuspro.com/uploads/42215/page/p202505191536465801f.jpg?size=800x0" alt="HDFocus Support" style="border-radius:0 0 var(--radius) 0;">
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:2.5rem;text-align:center;">
+    <div><strong style="font-size:1.6rem;color:var(--primary);display:block;">200+</strong><span style="color:var(--text-muted);font-size:0.88rem;">Employees</span></div>
+    <div><strong style="font-size:1.6rem;color:var(--primary);display:block;">ISO 9001</strong><span style="color:var(--text-muted);font-size:0.88rem;">Quality Certified</span></div>
+    <div><strong style="font-size:1.6rem;color:var(--primary);display:block;">100%</strong><span style="color:var(--text-muted);font-size:0.88rem;">Pre-Ship Testing</span></div>
+    <div><strong style="font-size:1.6rem;color:var(--primary);display:block;">10 Years</strong><span style="color:var(--text-muted);font-size:0.88rem;">Manufacturing</span></div>
+  </div>
+</section>
+
+<!-- GLOBAL CASES -->
+<section class="section section-alt">
+  <div class="section-header">
+    <div class="tag">Global Cases</div>
+    <h2>Trusted by Clients in 50+ Countries</h2>
+  </div>
+  <div class="cases-grid">
+    <div class="case-card">
+      <div class="case-photo"><img src="https://www.hdfocuspro.com/uploads/42215/products/p20240523113453228ab.jpg?size=750x0" alt="Singapore Case"></div>
+      <div class="case-info"><div class="case-tag">Corporate</div><h3>Distrii — Singapore</h3><p>Interactive display systems deployed across co-working spaces throughout Singapore.</p></div>
+    </div>
+    <div class="case-card">
+      <div class="case-photo"><img src="https://www.hdfocuspro.com/uploads/42215/products/p2024052311345211527.jpg?size=750x0" alt="Thailand Case"></div>
+      <div class="case-info"><div class="case-tag">Corporate</div><h3>Sime Darby — Thailand</h3><p>Corporate display solutions for Sime Darby's regional operations across Thailand.</p></div>
+    </div>
+    <div class="case-card">
+      <div class="case-photo"><img src="https://www.hdfocuspro.com/uploads/42215/products/p20240523113452bf86f.jpg?size=750x0" alt="India Case"></div>
+      <div class="case-info"><div class="case-tag">Retail</div><h3>Lowe's — India</h3><p>Large-format retail display rollout across Lowe's store network in India.</p></div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:2.5rem;">
+    <a href="cases.html" class="btn btn-outline">View All Case Studies</a>
   </div>
 </section>
 
 <!-- CTA BANNER -->
 <section class="cta-banner">
-  <h2>Ready to Upgrade Your Display Experience?</h2>
-  <p>Tell us your requirements and get a customized quote within 24 hours. No commitment needed.</p>
+  <h2>Ready to Partner with HDFocus?</h2>
+  <p>Get a customized quote within 24 hours. OEM/ODM, flexible MOQ, and global shipping available.</p>
   <div class="cta-buttons">
     <a href="contact.html" class="btn btn-white">Request a Quote</a>
     <a href="products.html" class="btn btn-outline" style="color:#fff;border-color:#fff;">Browse Products</a>
@@ -260,7 +414,13 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <div class="logo">HD<span>Focus</span></div>
-      <p>Professional LCD digital signage manufacturer serving global B2B clients across retail, hospitality, corporate, and outdoor environments.</p>
+      <p>Shenzhen HDFocus Technology Co., Ltd. — professional LCD digital signage manufacturer with 10+ years experience, serving 3,000+ B2B clients in 50+ countries.</p>
+      <div style="margin-top:1rem;display:flex;gap:0.75rem;flex-wrap:wrap;">
+        <img src="https://www.hdfocuspro.com/js/42215/CE.svg" alt="CE" style="height:28px;opacity:0.7;">
+        <img src="https://www.hdfocuspro.com/js/42215/FC.svg" alt="FCC" style="height:28px;opacity:0.7;">
+        <img src="https://www.hdfocuspro.com/js/42215/RoHs.svg" alt="RoHS" style="height:28px;opacity:0.7;">
+        <img src="https://www.hdfocuspro.com/js/42215/ISO_9001.svg" alt="ISO" style="height:28px;opacity:0.7;">
+      </div>
     </div>
     <div class="footer-col">
       <h4>Products</h4>
@@ -279,19 +439,48 @@
       <a href="solutions.html">Transportation</a>
     </div>
     <div class="footer-col">
-      <h4>Company</h4>
+      <h4>Contact</h4>
       <a href="about.html">About HDFocus</a>
       <a href="cases.html">Case Studies</a>
-      <a href="contact.html">Contact Us</a>
+      <a href="mailto:Jok@hd-focus.com">Jok@hd-focus.com</a>
+      <a href="https://wa.me/8615889675475">WhatsApp Us</a>
       <a href="contact.html">Get a Quote</a>
     </div>
   </div>
   <div class="footer-bottom">
-    <p>&copy; 2026 HDFocus. All rights reserved.</p>
+    <p>&copy; 2026 HDFocus — Shenzhen HDFocus Technology Co., Ltd. All rights reserved.</p>
     <p>lcdsignagepro.com</p>
   </div>
 </footer>
 
 <script src="main.js"></script>
+
+<!-- HERO SLIDER JS -->
+<script>
+let current = 0;
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+let timer = setInterval(() => changeSlide(1), 5000);
+
+function showSlide(n) {
+  slides[current].classList.remove('active');
+  dots[current].classList.remove('active');
+  current = (n + slides.length) % slides.length;
+  slides[current].classList.add('active');
+  dots[current].classList.add('active');
+}
+function changeSlide(dir) { clearInterval(timer); showSlide(current + dir); timer = setInterval(() => changeSlide(1), 5000); }
+function goSlide(n) { clearInterval(timer); showSlide(n); timer = setInterval(() => changeSlide(1), 5000); }
+</script>
+
+<!-- WHATSAPP FLOAT BUTTON -->
+<a href="https://wa.me/8615889675475" target="_blank" title="Chat on WhatsApp"
+  style="position:fixed;bottom:28px;right:28px;z-index:9999;background:#25d366;color:#fff;border-radius:50%;width:58px;height:58px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.5);transition:transform 0.2s;"
+  onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
 </body>
 </html>

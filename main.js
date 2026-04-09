@@ -70,7 +70,7 @@ if (form) {
     } catch {
       btn.textContent = original;
       btn.disabled = false;
-      alert('Something went wrong. Please email us directly at info@lcdsignagepro.com');
+      alert('Something went wrong. Please email us directly at Jok@hd-focus.com');
     }
   });
 }
