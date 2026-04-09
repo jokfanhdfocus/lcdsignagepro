@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products | HDFocus LCD Digital Signage</title>
+  <meta name="description" content="Browse HDFocus full range of LCD digital signage: freestanding, wall-mount, menu boards, transparent screens, touch kiosks, bar displays, outdoor and more." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .filter-bar { display:flex; gap:0.75rem; flex-wrap:wrap; justify-content:center; margin-bottom:2.5rem; }
+    .filter-btn { padding:0.5rem 1.2rem; border-radius:20px; border:1.5px solid var(--border); background:#fff; font-size:0.88rem; font-weight:600; cursor:pointer; transition:all 0.2s; }
+    .filter-btn:hover, .filter-btn.active { background:var(--primary); color:#fff; border-color:var(--primary); }
+    .product-detail { margin-top:0.75rem; }
+    .product-detail ul { list-style:disc; padding-left:1.2rem; color:var(--text-muted); font-size:0.85rem; }
+    .product-detail ul li { margin-bottom:0.3rem; }
+    .product-cta { display:flex; gap:0.75rem; margin-top:1.25rem; }
+    .product-cta a { font-size:0.85rem; font-weight:600; padding:0.45rem 1rem; border-radius:6px; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="logo">HD<span>Focus</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="products.html" class="active">Products</a></li>
+    <li><a href="solutions.html">Solutions</a></li>
+    <li><a href="cases.html">Cases</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="contact.html" class="nav-cta">Get a Quote</a></li>
+  </ul>
+  <div class="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="page-hero">
+  <h1>Our Product Range</h1>
+  <p>Professional LCD digital signage for every application — indoor, outdoor, interactive, and custom OEM/ODM.</p>
+</div>
+
+<section class="section">
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filterProducts('all', this)">All Products</button>
+    <button class="filter-btn" onclick="filterProducts('indoor', this)">Indoor</button>
+    <button class="filter-btn" onclick="filterProducts('outdoor', this)">Outdoor</button>
+    <button class="filter-btn" onclick="filterProducts('touch', this)">Interactive / Touch</button>
+    <button class="filter-btn" onclick="filterProducts('special', this)">Special Displays</button>
+  </div>
+
+  <!-- INDOOR PRODUCTS -->
+  <h2 style="margin-bottom:1.5rem;color:var(--primary);">🏢 Indoor Displays</h2>
+  <div class="products-grid" style="margin-bottom:3.5rem;">
+
+    <div class="product-card" data-cat="indoor">
+      <div class="product-img">🖥️<div class="product-badge">Best Seller</div></div>
+      <div class="product-info">
+        <h3>Freestanding Floor Display</h3>
+        <p>Slim, elegant portrait/landscape kiosk ideal for retail stores, lobbies, exhibitions, and airports.</p>
+        <div class="product-specs"><span class="spec-tag">4K UHD</span><span class="spec-tag">32"–98"</span><span class="spec-tag">Android/Win</span></div>
+        <div class="product-detail">
+          <ul>
+            <li>Grade-A original LCD panel</li>
+            <li>360° rotating base option</li>
+            <li>Aluminum alloy slim body</li>
+            <li>Built-in media player + free CMS</li>
+            <li>Custom brightness: 400–3000 nits</li>
+          </ul>
+        </div>
+        <div class="product-cta">
+          <a href="contact.html" class="btn btn-primary">Get Quote</a>
+          <a href="contact.html" class="btn btn-outline">Datasheet</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="indoor">
+      <div class="product-img">📺</div>
+      <div class="product-info">
+        <h3>Wall-Mounted Display</h3>
+        <p>Ultra-thin wall panels for corridors, meeting rooms, retail walls, and digital notice boards.</p>
+        <div class="product-specs"><span class="spec-tag">4K UHD</span><span class="spec-tag">32"–86"</span><span class="spec-tag">Slim Bezel</span></div>
+        <div class="product-detail">
+          <ul>
+            <li>Ultra-slim profile (≤20mm)</li>
+            <li>Landscape & portrait modes</li>
+            <li>VESA mount compatible</li>
+            <li>Built-in speaker option</li>
+            <li>OPS slot available</li>
+          </ul>
+        </div>
+        <div class="product-cta">
+          <a href="contact.html" class="btn btn-primary">Get Quote</a>
+          <a href="contact.html" class="btn btn-outline">Datasheet</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="indoor">
+      <div class="product-img">🍽️<div class="product-badge">Popular</div></div>
+      <div class="product-info">
+        <h3>Digital Menu Board</h3>
+        <p>Vibrant menu display for restaurants, cafes, fast food chains, and food courts. Auto scheduling built-in.</p>
+        <div class="product-specs"><span class="spec-tag">4K</span><span class="spec-tag">Multi-Zone</span><span class="spec-tag">Scheduling</span></div>
+        <div class="product-detail">
+          <ul>
+            <li>Dynamic price & content zones</li>
+            <li>Day-part scheduling</li>
+            <li>Single or multi-screen setup</li>
+            <li>Landscape / portrait / triptych</li>
+            <li>Free menu design templates</li>
+          </ul>
+        </div>
+        <div class="product-cta">
+          <a href="contact.html" class="btn btn-primary">Get Quote</a>
+          <a href="contact.html" class="btn btn-outline">Datasheet</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="indoor special">
+      <div class="product-img">🔲<div class="product-badge">Unique</div></div>
+      <div class="product-info">
+        <h3>Transparent Dual Screen</h3>
+        <p>See-through dual-screen display — show products inside while displaying digital content on screen.</p>
+        <div class="product-specs"><span class="spec-tag">Transparent</span><span class="spec-tag">Dual Screen</span><span class="spec-tag">4K</span></div>
+        <div class="product-detail">
+          <ul>
+            <li>High transparency OLED/LCD</li>
+            <li>Front + rear visible content</li>
+            <li>Perfect for product showcasing</li>
+            <li>Retail window & showcase use</li>
+            <li>Custom shape available</li>
+          </ul>
+        </div>
+        <div class="product-cta">
+          <a href="contact.html" class="btn btn-primary">Get Quote</a>
+          <a href="contact.html" class="btn btn-outline">Datasheet</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="indoor special">
+      <div class="product-img">💡</div>
+      <div class="product-info">
+        <h3>High-Brightness Display</h3>
+        <p>Extra-bright panels designed for window-facing installations and well-lit environments.</p>
+        <div class="product-specs"><span class="spec-tag">2000–3000 nits</span><span class="spec-tag">4K</span><span class="spec-tag">Anti-Glare</span></div>
+        <div class="product-detail">
+          <ul>
+            <li>2000–3000 nit brightness indoor</li>
+            <li>Sun-readable in bright environments</li>
+            <li>Anti-glare screen coating</li>
+            <li>Wide viewing angle (178°)</li>
+            <li>Wall mount & freestanding</li>
+          </ul>
+        </div>
+        <div class="product-cta">
+          <a href="contact.html" class="btn btn-primary">Get Quote</a>
+          <a href="contact.html" class="btn btn-outline">Datasheet</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="indoor special">
+      <div class="product-img">🎨</div>
+      <div class="product-info">
+        <h3>Flexible Frame Display (随心屏)</h3>
+        <p>Modular frame display with flexible content zone configuration — mix images, video, and data feeds.</p>
+        <div class="product-specs"><span class="spec-tag">Multi-Zone</span><span class="spec-tag">4K</span><span class="spec-tag">Modular</span></div>
+        <div class="product-detail">
+          <ul>
+            <li>Fully flexible content zoning</li>
+            <li>Live data feed integration</li>
+            <li>Social media wall support</li>
+            <li>Portrait & landscape</li>
+            <li>Ideal for retail & brand walls</li>
+          </ul>
+        </div>
+        <div class="product-cta">
+          <a href="contact.html" class="btn btn-primary">Get Quote</a>
+          <a href="contact.html" class="btn btn-outline">Datasheet</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="indoor touch">
+      <div class="product-img">🤖<div class="product-badge">Self-Service</div></div>
+      <div class="product-info">
+        <h3>Self-Order Kiosk (点餐机)</h3>
+        <p>Self-service ordering terminal for QSR, restaurants, and retail. Reduces queues and increases order accuracy.</p>
+        <div class="product-specs"><span class="spec-tag">Touch</span><span class="spec-tag">Payment Ready</span><span class="spec-tag">POS Integration</span></div>
+        <div class="product-detail">
+          <ul>
+            <li>10-point capacitive touch</li>
+            <li>POS & payment system integration</li>
+            <li>Freestanding or counter-top</li>
+            <li>Printer & scanner compatible</li>
+            <li>Custom branding & UI</li>
+          </ul>
+        </div>
+        <div class="product-cta">
+          <a href="contact.html" class="btn btn-primary">Get Quote</a>
+          <a href="contact.html" class="btn btn-outline">Datasheet</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="indoor touch">
+      <div class="product-img">👆</div>
+      <div class="product-info">
+        <h3>Interactive Touch Table</h3>
+        <p>Multi-touch interactive table for hospitality, museums, showrooms, and corporate meeting rooms.</p>
+        <div class="product-specs"><span class="spec-tag">10-Point Touch</span><span class="spec-tag">4K</span><span class="spec-tag">32"–86"</span></div>
+        <div class="product-detail">
+          <ul>
+            <li>Flat or inclined surface options</li>
+            <li>Windows / Android OS</li>
+            <li>Tempered glass surface</li>
+            <li>Custom app development support</li>
+            <li>Suitable for collaborative work</li>
+          </ul>
+        </div>
+        <div class="product-cta">
+          <a href="contact.html" class="btn btn-primary">Get Quote</a>
+          <a href="contact.html" class="btn btn-outline">Datasheet</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="indoor special">
+      <div class="product-img">📊</div>
+      <div class="product-info">
+        <h3>Bar / Shelf Strip Display</h3>
+        <p>Ultra-wide bar format displays for retail shelves, checkout counters, and price display applications.</p>
+        <div class="product-specs"><span class="spec-tag">Ultra-Wide</span><span class="spec-tag">HD</span><span class="spec-tag">Slim</span></div>
+        <div class="product-detail">
+          <ul>
+            <li>Aspect ratio: 32:9 or custom</li>
+            <li>Ideal for shelf-edge or bar-top</li>
+            <li>Daisy-chain multi-screen</li>
+            <li>USB / HDMI input</li>
+            <li>Custom length available</li>
+          </ul>
+        </div>
+        <div class="product-cta">
+          <a href="contact.html" class="btn btn-primary">Get Quote</a>
+          <a href="contact.html" class="btn btn-outline">Datasheet</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="indoor special">
+      <div class="product-img">📱</div>
+      <div class="product-info">
+        <h3>Full-Screen Edge-to-Edge Display</h3>
+        <p>Borderless bezel-free display for seamless video walls and immersive brand experiences.</p>
+        <div class="product-specs"><span class="spec-tag">Zero Bezel</span><span class="spec-tag">4K</span><span class="spec-tag">Video Wall</span></div>
+        <div class="product-detail">
+          <ul>
+            <li>Near-zero bezel design</li>
+            <li>Video wall splicing support</li>
+            <li>178° wide viewing angle</li>
+            <li>High contrast ratio</li>
+            <li>Available in all standard sizes</li>
+          </ul>
+        </div>
+        <div class="product-cta">
+          <a href="contact.html" class="btn btn-primary">Get Quote</a>
+          <a href="contact.html" class="btn btn-outline">Datasheet</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- OUTDOOR PRODUCTS -->
+  <h2 style="margin-bottom:1.5rem;color:var(--primary);">🌤️ Outdoor Displays</h2>
+  <div class="products-grid">
+
+    <div class="product-card" data-cat="outdoor">
+      <div class="product-img">🌞<div class="product-badge">Outdoor</div></div>
+      <div class="product-info">
+        <h3>Outdoor Freestanding Kiosk</h3>
+        <p>Weatherproof outdoor floor-standing display for storefronts, transit stops, plazas, and outdoor advertising.</p>
+        <div class="product-specs"><span class="spec-tag">IP65</span><span class="spec-tag">2500–5000 nits</span><span class="spec-tag">4K</span></div>
+        <div class="product-detail">
+          <ul>
+            <li>IP65 weather & dust proof</li>
+            <li>2500–5000 nit brightness</li>
+            <li>Operating temp: -30°C to 60°C</li>
+            <li>Anti-vandal tempered glass</li>
+            <li>Fan + air-con cooling options</li>
+          </ul>
+        </div>
+        <div class="product-cta">
+          <a href="contact.html" class="btn btn-primary">Get Quote</a>
+          <a href="contact.html" class="btn btn-outline">Datasheet</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="outdoor">
+      <div class="product-img">🏙️<div class="product-badge">Outdoor</div></div>
+      <div class="product-info">
+        <h3>Outdoor Wall-Mounted Display</h3>
+        <p>Robust wall-mount outdoor panels for building facades, bus shelters, parking lots, and venue exteriors.</p>
+        <div class="product-specs"><span class="spec-tag">IP65</span><span class="spec-tag">2500–5000 nits</span><span class="spec-tag">4K</span></div>
+        <div class="product-detail">
+          <ul>
+            <li>Reinforced steel enclosure</li>
+            <li>Sunlight-readable screen</li>
+            <li>Remote brightness auto-adjust</li>
+            <li>Wind-load resistant mounting</li>
+            <li>Optional touch & interactivity</li>
+          </ul>
+        </div>
+        <div class="product-cta">
+          <a href="contact.html" class="btn btn-primary">Get Quote</a>
+          <a href="contact.html" class="btn btn-outline">Datasheet</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CMS SOFTWARE SECTION -->
+<section class="section section-alt">
+  <div class="section-header">
+    <div class="tag">Free with Every Display</div>
+    <h2>Professional CMS Software — Included</h2>
+    <p>Manage all your screens from one platform, anywhere in the world.</p>
+  </div>
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">🌐</div>
+      <h3>Remote Control</h3>
+      <p>Power on/off, adjust volume, change content, and monitor screen status from any device, anywhere.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📅</div>
+      <h3>Schedule Publishing</h3>
+      <p>Schedule content by time, day, or recurring events. Set it once and forget it.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🎨</div>
+      <h3>Built-in Templates</h3>
+      <p>100+ professional templates for menus, promotions, events, and announcements — ready to customize.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📱</div>
+      <h3>One-Click Publish</h3>
+      <p>Push content to one screen or thousands simultaneously with a single click.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📊</div>
+      <h3>Play Log & Analytics</h3>
+      <p>Track content playback history, screen uptime, and viewing analytics for proof-of-play.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🔒</div>
+      <h3>Multi-User & Permissions</h3>
+      <p>Role-based access control — assign different permissions to different team members or locations.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <h2>Need a Custom Configuration?</h2>
+  <p>We support OEM/ODM for all products — custom size, OS, interface, brightness, and branding. Tell us your specs.</p>
+  <div class="cta-buttons">
+    <a href="contact.html" class="btn btn-white">Request Custom Quote</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo">HD<span>Focus</span></div>
+      <p>Professional LCD digital signage manufacturer serving global B2B clients across retail, hospitality, corporate, and outdoor environments.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Products</h4>
+      <a href="products.html">Freestanding Display</a>
+      <a href="products.html">Wall-Mounted Display</a>
+      <a href="products.html">Digital Menu Board</a>
+      <a href="products.html">Transparent Screen</a>
+      <a href="products.html">Outdoor Signage</a>
+    </div>
+    <div class="footer-col">
+      <h4>Solutions</h4>
+      <a href="solutions.html">Retail</a>
+      <a href="solutions.html">Food & Beverage</a>
+      <a href="solutions.html">Hospitality</a>
+      <a href="solutions.html">Corporate</a>
+      <a href="solutions.html">Transportation</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="about.html">About HDFocus</a>
+      <a href="cases.html">Case Studies</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="contact.html">Get a Quote</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 HDFocus. All rights reserved.</p>
+    <p>lcdsignagepro.com</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+function filterProducts(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.product-card').forEach(card => {
+    if (cat === 'all' || card.dataset.cat?.includes(cat)) {
+      card.style.display = '';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+</script>
+</body>
+</html>

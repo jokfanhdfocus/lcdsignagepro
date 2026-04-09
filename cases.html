@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Studies | HDFocus Digital Signage Projects</title>
+  <meta name="description" content="Real-world HDFocus digital signage deployments across retail, restaurants, hotels, corporate offices, and outdoor environments worldwide." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .cases-filter { display:flex; gap:0.75rem; flex-wrap:wrap; justify-content:center; margin-bottom:2.5rem; }
+    .cases-filter button { padding:0.5rem 1.2rem; border-radius:20px; border:1.5px solid var(--border); background:#fff; font-size:0.88rem; font-weight:600; cursor:pointer; transition:all 0.2s; }
+    .cases-filter button:hover, .cases-filter button.active { background:var(--primary); color:#fff; border-color:var(--primary); }
+    .case-result { display:flex; gap:0.5rem; flex-wrap:wrap; margin-top:1rem; }
+    .case-result span { background:#e0eeff; color:var(--primary); font-size:0.78rem; font-weight:700; padding:0.2rem 0.6rem; border-radius:4px; }
+    .testimonial-section { background:var(--gray); padding:5rem 5%; }
+    .testimonials-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:1.5rem; }
+    .testimonial-card { background:#fff; border-radius:var(--radius); padding:2rem; border:1px solid var(--border); }
+    .testimonial-card p { color:var(--text-muted); font-style:italic; margin-bottom:1.25rem; font-size:0.95rem; line-height:1.7; }
+    .testimonial-author { display:flex; align-items:center; gap:0.75rem; }
+    .author-avatar { width:44px; height:44px; border-radius:50%; background:linear-gradient(135deg,var(--primary),var(--accent)); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; font-size:1rem; flex-shrink:0; }
+    .author-info strong { display:block; font-size:0.9rem; }
+    .author-info span { font-size:0.82rem; color:var(--text-muted); }
+    .stars { color:#f59e0b; font-size:0.9rem; margin-bottom:0.75rem; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="logo">HD<span>Focus</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="solutions.html">Solutions</a></li>
+    <li><a href="cases.html" class="active">Cases</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="contact.html" class="nav-cta">Get a Quote</a></li>
+  </ul>
+  <div class="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="page-hero">
+  <h1>Case Studies</h1>
+  <p>See how businesses around the world use HDFocus displays to engage customers, streamline operations, and grow their brand.</p>
+</div>
+
+<section class="section">
+  <div class="cases-filter">
+    <button class="active" onclick="filterCases('all',this)">All Cases</button>
+    <button onclick="filterCases('retail',this)">Retail</button>
+    <button onclick="filterCases('fnb',this)">Food & Beverage</button>
+    <button onclick="filterCases('hotel',this)">Hospitality</button>
+    <button onclick="filterCases('corporate',this)">Corporate</button>
+    <button onclick="filterCases('outdoor',this)">Outdoor</button>
+  </div>
+
+  <div class="cases-grid">
+
+    <div class="case-card" data-cat="retail">
+      <div class="case-img" style="background:linear-gradient(135deg,#e0eeff,#c7d9f5);">🛍️</div>
+      <div class="case-info">
+        <div class="case-tag">Retail</div>
+        <h3>Fashion Chain — 200+ Stores, UAE & Saudi Arabia</h3>
+        <p>Deployed 400+ wall-mounted 4K displays across 200 flagship stores in the UAE and Saudi Arabia. Dynamic promotional content updated centrally reduced marketing print costs by 80%.</p>
+        <div class="case-result">
+          <span>400 Screens</span><span>200 Locations</span><span>UAE & KSA</span><span>Wall-Mount 55"</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-card" data-cat="fnb">
+      <div class="case-img" style="background:linear-gradient(135deg,#e8f5e9,#c8e6c9);">🍔</div>
+      <div class="case-info">
+        <div class="case-tag">Food & Beverage</div>
+        <h3>QSR Chain — Digital Menu Boards, Southeast Asia</h3>
+        <p>Installed digital menu board triptych systems across 80 QSR locations in Malaysia and Thailand. Day-part scheduling and remote price updates reduced menu changeover time from 2 days to 5 minutes.</p>
+        <div class="case-result">
+          <span>80 Locations</span><span>Malaysia & Thailand</span><span>Menu Boards</span><span>Remote CMS</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-card" data-cat="hotel">
+      <div class="case-img" style="background:linear-gradient(135deg,#f3e5f5,#e1bee7);">🏨</div>
+      <div class="case-info">
+        <div class="case-tag">Hospitality</div>
+        <h3>5-Star Hotel Group — Lobby & Event Signage, Europe</h3>
+        <p>Supplied freestanding floor kiosks and transparent dual screens for lobby installations in a 5-star hotel group across Germany and France. Transparent screens used for wine and product showcasing.</p>
+        <div class="case-result">
+          <span>12 Hotels</span><span>Germany & France</span><span>Transparent Screen</span><span>Freestanding Kiosk</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-card" data-cat="corporate">
+      <div class="case-img" style="background:linear-gradient(135deg,#e3f2fd,#bbdefb);">🏢</div>
+      <div class="case-info">
+        <div class="case-tag">Corporate</div>
+        <h3>Tech Company HQ — Interactive Meeting Rooms, UK</h3>
+        <p>Delivered 30 interactive touch tables and 60 meeting room wall displays for a global tech company's London headquarters. Real-time KPI dashboards and room booking integration.</p>
+        <div class="case-result">
+          <span>30 Touch Tables</span><span>60 Wall Displays</span><span>United Kingdom</span><span>KPI Dashboard</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-card" data-cat="outdoor">
+      <div class="case-img" style="background:linear-gradient(135deg,#fff3e0,#ffe0b2);">🌤️</div>
+      <div class="case-info">
+        <div class="case-tag">Outdoor</div>
+        <h3>Shopping Mall — Outdoor Entrance Kiosks, Australia</h3>
+        <p>Installed IP65-rated 5000-nit outdoor freestanding kiosks at the main entrances of 5 large shopping malls in Australia. Displays run 24/7 in harsh outdoor conditions with zero downtime.</p>
+        <div class="case-result">
+          <span>5 Malls</span><span>Australia</span><span>5000 nits</span><span>IP65 Outdoor</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-card" data-cat="fnb">
+      <div class="case-img" style="background:linear-gradient(135deg,#fce4ec,#f8bbd0);">☕</div>
+      <div class="case-info">
+        <div class="case-tag">Food & Beverage</div>
+        <h3>Café Franchise — Self-Order Kiosks, Singapore</h3>
+        <p>Deployed self-order kiosks in 40 café outlets across Singapore. Average order value increased by 22% within 3 months of installation. Queue time reduced by 35%.</p>
+        <div class="case-result">
+          <span>40 Outlets</span><span>Singapore</span><span>Self-Order Kiosk</span><span>+22% AOV</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-card" data-cat="retail">
+      <div class="case-img" style="background:linear-gradient(135deg,#e8eaf6,#c5cae9);">💊</div>
+      <div class="case-info">
+        <div class="case-tag">Retail</div>
+        <h3>Pharmacy Chain — Bar Strip Shelf Displays, Netherlands</h3>
+        <p>Installed bar strip shelf-edge displays across 120 pharmacy branches in the Netherlands. Dynamic pricing and product promotions updated centrally via CMS in real time.</p>
+        <div class="case-result">
+          <span>120 Stores</span><span>Netherlands</span><span>Bar Strip Display</span><span>Real-time Pricing</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-card" data-cat="outdoor">
+      <div class="case-img" style="background:linear-gradient(135deg,#e0f2f1,#b2dfdb);">🚌</div>
+      <div class="case-info">
+        <div class="case-tag">Outdoor</div>
+        <h3>City Transit Authority — Bus Stop Displays, Thailand</h3>
+        <p>Supplied 500 outdoor wall-mounted displays for bus stop passenger information systems in Bangkok. Displays provide real-time bus arrival info and advertising across the city network.</p>
+        <div class="case-result">
+          <span>500 Screens</span><span>Bangkok, Thailand</span><span>Outdoor Wall-Mount</span><span>Real-time Info</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-card" data-cat="hotel">
+      <div class="case-img" style="background:linear-gradient(135deg,#fff8e1,#ffecb3);">🍽️</div>
+      <div class="case-info">
+        <div class="case-tag">Hospitality</div>
+        <h3>Resort Chain — Restaurant Menu Boards, Middle East</h3>
+        <p>Equipped 15 resort restaurants with multi-zone digital menu boards across properties in Dubai and Qatar. Multilingual content (English/Arabic) with seasonal menu scheduling.</p>
+        <div class="case-result">
+          <span>15 Restaurants</span><span>Dubai & Qatar</span><span>Menu Boards</span><span>Multilingual</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonial-section">
+  <div class="section-header">
+    <div class="tag">What Our Clients Say</div>
+    <h2>Trusted by B2B Partners Worldwide</h2>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p>"HDFocus delivered exactly what we needed — high-brightness displays that look stunning even in direct sunlight outside our stores. The CMS software made remote management incredibly easy."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">JM</div>
+        <div class="author-info">
+          <strong>James M.</strong>
+          <span>Operations Director, Retail Group — UAE</span>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p>"The digital menu boards transformed our restaurants. Updating prices and promotions used to take days — now it takes minutes. Our customers notice the difference immediately."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">SK</div>
+        <div class="author-info">
+          <strong>Sarah K.</strong>
+          <span>Marketing Manager, QSR Chain — Malaysia</span>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p>"We chose HDFocus for our hotel lobby installations because of their transparency screen technology. The product quality exceeded expectations and delivery was on time. Excellent B2B partner."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">TP</div>
+        <div class="author-info">
+          <strong>Thomas P.</strong>
+          <span>Procurement Manager, Hotel Group — Germany</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <h2>Ready to Be Our Next Success Story?</h2>
+  <p>Tell us about your project and get a tailored solution with a quote within 24 hours.</p>
+  <div class="cta-buttons">
+    <a href="contact.html" class="btn btn-white">Start Your Project</a>
+    <a href="products.html" class="btn btn-outline" style="color:#fff;border-color:#fff;">Browse Products</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo">HD<span>Focus</span></div>
+      <p>Professional LCD digital signage manufacturer serving global B2B clients across retail, hospitality, corporate, and outdoor environments.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Products</h4>
+      <a href="products.html">Freestanding Display</a>
+      <a href="products.html">Wall-Mounted Display</a>
+      <a href="products.html">Digital Menu Board</a>
+      <a href="products.html">Transparent Screen</a>
+      <a href="products.html">Outdoor Signage</a>
+    </div>
+    <div class="footer-col">
+      <h4>Solutions</h4>
+      <a href="solutions.html">Retail</a>
+      <a href="solutions.html">Food & Beverage</a>
+      <a href="solutions.html">Hospitality</a>
+      <a href="solutions.html">Corporate</a>
+      <a href="solutions.html">Transportation</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="about.html">About HDFocus</a>
+      <a href="cases.html">Case Studies</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="contact.html">Get a Quote</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 HDFocus. All rights reserved.</p>
+    <p>lcdsignagepro.com</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+function filterCases(cat, btn) {
+  document.querySelectorAll('.cases-filter button').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.case-card').forEach(card => {
+    card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>
