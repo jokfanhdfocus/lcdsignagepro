@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /seo_assets/
+
+Sitemap: https://lcdsignagepro.com/sitemap.xml
